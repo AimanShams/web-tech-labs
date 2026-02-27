@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Registration - Aiman's Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Header with consistent navigation -->
+    <header>
+      <h1>Aiman Shams</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="profile.html">About</a></li>
+          <li><a href="schedule.html">Courses</a></li>
+          <li><a href="registration.html" class="active">Contact</a></li>
+          <li>
+            <a href="https://www.uetpeshawar.edu.pk" target="_blank"
+              >UET Website</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <h2>Student Registration Form</h2>
+
+      <!-- Formspree integration with redirect to Home after submit -->
+      <form
+        action="https://formspree.io/f/xkoverkp?thankyou=index.html"
+        method="POST"
+      >
+        <label>Full Name:</label><br />
+        <input type="text" name="fullname" required /><br /><br />
+
+        <label>Registration Number:</label><br />
+        <input type="text" name="regno" required /><br /><br />
+
+        <label>Email:</label><br />
+        <input type="email" name="email" required /><br /><br />
+
+        <label>Password:</label><br />
+        <input type="password" name="password" required /><br /><br />
+
+        <label>Course:</label><br />
+        <select name="course">
+          <option>Web Technologies</option>
+          <option>Operating Systems</option>
+          <option>Artificial Intelligence</option>
+          <option>Data Science</option></select
+        ><br /><br />
+
+        <label>Semester:</label><br />
+        <input type="radio" name="semester" value="1st" /> 1st
+        <input type="radio" name="semester" value="2nd" /> 2nd
+        <input type="radio" name="semester" value="3rd" /> 3rd
+        <input type="radio" name="semester" value="4th" /> 4th <br /><br />
+
+        <input type="checkbox" required /> I agree to the terms and
+        conditions<br /><br />
+
+        <input type="submit" value="Register" />
+      </form>
+
+      <!-- Back to Home link -->
+      <p><a href="index.html">← Back to Home</a></p>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2026 Aiman Shams | Department of Computer Science, UET Peshawar
+      </p>
+    </footer>
+  </body>
+</html>
