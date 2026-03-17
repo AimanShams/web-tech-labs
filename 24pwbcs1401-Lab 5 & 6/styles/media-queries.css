@@ -1,0 +1,74 @@
+body {
+  font-family: Arial;
+  text-align: center;
+}
+
+/* Default (Mobile) */
+.indicator {
+  background: red;
+  color: white;
+  padding: 10px;
+}
+
+.box {
+  background: lightblue;
+  padding: 40px;
+  margin: 20px;
+}
+
+.text {
+  font-size: 14px;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .indicator {
+    background: orange;
+  }
+
+  .box {
+    background: yellow;
+  }
+
+  .text {
+    font-size: 18px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .indicator {
+    background: green;
+  }
+
+  .box {
+    background: lightgreen;
+  }
+
+  .text {
+    font-size: 24px;
+  }
+}
+
+@media (min-width: 600px) {
+  .form-group {
+    flex: 1 1 48%; /* two-column form on tablet */
+  }
+}
+
+@media (min-width: 992px) {
+  .form-group {
+    flex: 1 1 30%; /* three-column form on desktop */
+  }
+}
+@media (min-width: 600px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(2, 1fr); /* tablet: 2 columns */
+  }
+}
+
+@media (min-width: 992px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr); /* desktop: 3 columns */
+  }
+}

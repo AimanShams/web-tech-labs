@@ -1,0 +1,77 @@
+/* Mobile-first base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 1rem;
+  background-color: #f5f5f5;
+}
+
+.data-table-section h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.responsive-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.responsive-table th,
+.responsive-table td {
+  display: block; /* Stack on mobile */
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+}
+
+.responsive-table thead {
+  display: none; /* Hide headers on mobile */
+}
+
+.responsive-table tbody tr {
+  margin-bottom: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #fff;
+  padding: 0.5rem;
+}
+
+.responsive-table tbody td::before {
+  content: attr(data-label);
+  font-weight: bold;
+  display: inline-block;
+  width: 100px;
+  color: #1a73e8;
+}
+
+/* Tablet - show as card layout */
+@media (min-width: 768px) {
+  .responsive-table th,
+  .responsive-table td {
+    display: table-cell;
+    padding: 0.75rem;
+  }
+
+  .responsive-table thead {
+    display: table-header-group;
+    background-color: #1a73e8;
+    color: #fff;
+  }
+
+  .responsive-table tbody td::before {
+    content: none; /* Remove label prefix */
+  }
+
+  .responsive-table tbody tr {
+    display: table-row;
+    background-color: #fff;
+    margin-bottom: 0;
+  }
+}
+
+/* Desktop - full table */
+@media (min-width: 1024px) {
+  .responsive-table {
+    font-size: 1rem;
+  }
+}

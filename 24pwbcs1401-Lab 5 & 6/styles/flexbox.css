@@ -1,0 +1,209 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: black;
+  color: white;
+  padding: 10px;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+/* Nav Links */
+.nav-links {
+  display: flex;
+  list-style: none;
+  margin: 0;
+}
+
+.nav-links li {
+  margin: 0 10px;
+  position: relative;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Dropdown */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: gray;
+  top: 30px;
+  list-style: none;
+  padding: 10px;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background: lightgray;
+  height: 100vh;
+  padding: 10px;
+}
+
+.sidebar a {
+  margin: 5px 0;
+}
+
+/* Content */
+.content {
+  margin-left: 210px;
+  padding: 20px;
+}
+
+/* Hamburger */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+/* 🔥 Responsive */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    display: none;
+    background: black;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: static;
+  }
+
+  .sidebar {
+    width: 100%;
+    height: auto;
+  }
+
+  .content {
+    margin-left: 0;
+  }
+}
+
+/* Card Container */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Cards */
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 30%;
+  background: lightblue;
+  padding: 15px;
+  min-height: 200px;
+}
+
+/* Button at bottom */
+.card button {
+  margin-top: auto;
+}
+
+/* 🔥 Responsive */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 45%;
+  }
+}
+
+@media (max-width: 500px) {
+  .card {
+    flex: 1 1 100%;
+  }
+}
+
+/* Dashboard Cards */
+.cards {
+  display: flex;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.card {
+  flex: 1;
+  background: lightblue;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+  }
+}
+
+.flex-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin: 20px;
+}
+
+.form-group {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-actions {
+  flex: 1 1 100%;
+}
+
+button {
+  padding: 10px 20px;
+  background: #333;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.project {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: #eee;
+  border: 1px solid #ccc;
+  flex-direction: column; /* masonry layout effect */
+}

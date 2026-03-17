@@ -1,0 +1,35 @@
+/* Show/Hide Elements */
+.hide-mobile { display: none; }
+.show-mobile { display: block; }
+
+/* Tablet and up */
+@media (min-width: 768px) {
+  .hide-tablet { display: none; }
+  .show-tablet { display: block; }
+  .hide-mobile { display: block; }
+  .show-mobile { display: none; }
+}
+
+/* Desktop and up */
+@media (min-width: 1024px) {
+  .hide-desktop { display: none; }
+  .show-desktop { display: block; }
+}
+
+/* Spacing Utilities */
+.mt-1 { margin-top: 0.5rem; }
+.mt-2 { margin-top: 1rem; }
+.mb-1 { margin-bottom: 0.5rem; }
+.mb-2 { margin-bottom: 1rem; }
+
+/* Text Alignment */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Flexbox Utilities */
+.flex { display: flex; }
+.flex-column { flex-direction: column; }
+.flex-row { flex-direction: row; }
+.justify-center { justify-content: center; }
+.align-center { align-items: center; }

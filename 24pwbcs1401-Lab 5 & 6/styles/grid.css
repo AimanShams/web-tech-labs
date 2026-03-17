@@ -1,0 +1,288 @@
+body {
+  font-family: Arial;
+}
+
+/* Grid Container */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+  gap: 10px;
+  padding: 20px;
+}
+
+/* Items */
+.item {
+  position: relative;
+  background: lightblue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+}
+
+/* Masonry effect (different sizes) */
+.item1 {
+  grid-row: span 2;
+}
+
+.item3 {
+  grid-column: span 2;
+}
+
+.item5 {
+  grid-row: span 2;
+}
+
+/* Hover Overlay */
+.item::after {
+  content: "View";
+  position: absolute;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.item:hover::after {
+  opacity: 1;
+}
+
+/* 🔥 Tablet */
+@media (max-width: 768px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 🔥 Mobile */
+@media (max-width: 500px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* COMMON */
+.header, .footer {
+  background: black;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}
+
+.left {
+  background: lightgray;
+}
+
+.right {
+  background: lightgray;
+}
+
+.main {
+  background: lightblue;
+}
+
+/* FLOAT */
+.float-container .left {
+  float: left;
+  width: 20%;
+}
+
+.float-container .main {
+  float: left;
+  width: 60%;
+}
+
+.float-container .right {
+  float: left;
+  width: 20%;
+}
+
+.float-container .footer {
+  clear: both;
+}
+
+/* FLEXBOX */
+.flex-body {
+  display: flex;
+}
+
+.flex-body .left,
+.flex-body .right {
+  width: 20%;
+}
+
+.flex-body .main {
+  width: 60%;
+}
+
+/* GRID */
+.grid-container {
+  display: grid;
+  grid-template-areas:
+    "header header header"
+    "left main right"
+    "footer footer footer";
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+.grid-container .header { grid-area: header; }
+.grid-container .left { grid-area: left; }
+.grid-container .main { grid-area: main; }
+.grid-container .right { grid-area: right; }
+.grid-container .footer { grid-area: footer; }
+
+/*  Responsive */
+@media (max-width: 768px) {
+
+  .float-container .left,
+  .float-container .main,
+  .float-container .right {
+    float: none;
+    width: 100%;
+  }
+
+  .flex-body {
+    flex-direction: column;
+  }
+
+  .grid-container {
+    grid-template-areas:
+      "header"
+      "left"
+      "main"
+      "right"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Shop Layout */
+.shop-container {
+  display: grid;
+  grid-template-areas:
+    "sidebar products";
+  grid-template-columns: 250px 1fr;
+}
+
+/* Sidebar */
+.filter-sidebar {
+  grid-area: sidebar;
+  background: lightgray;
+  padding: 15px;
+}
+
+/* Products Grid */
+.products {
+  grid-area: products;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  padding: 15px;
+}
+
+/* Product Card */
+.product {
+  background: lightblue;
+  padding: 10px;
+  text-align: center;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .products {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .shop-container {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "sidebar"
+      "products";
+  }
+}
+
+@media (max-width: 500px) {
+  .products {
+    grid-template-columns: 1fr;
+  }
+
+  .filter-sidebar {
+    display: none; /* off-canvas */
+  }
+}
+/* Dashboard Grid Layout */
+.dashboard {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+}
+
+/* Sidebar */
+.dash-sidebar {
+  background: black;
+  color: white;
+  height: 100vh;
+  padding: 20px;
+}
+
+/* Main */
+.dash-main {
+  padding: 20px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .dashboard {
+    grid-template-columns: 1fr;
+  }
+
+  .dash-sidebar {
+    height: auto;
+  }
+}
+
+.portfolio-grid {
+  display: grid;
+  gap: 15px;
+  grid-template-columns: 1fr; /* mobile single column */
+}
+/* Mobile-first base styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Tablet (768px and up) */
+@media (min-width: 768px) {
+  body {
+    background-color: #f0f8ff;
+  }
+}
+
+/* Small Desktop (1024px and up) */
+@media (min-width: 1024px) {
+  body {
+    background-color: #e6f2ff;
+  }
+}
+
+/* Large Desktop (1200px and up) */
+@media (min-width: 1200px) {
+  body {
+    background-color: #cce0ff;
+  }
+}
+
+/* Extra Large (1400px and up) */
+@media (min-width: 1400px) {
+  body {
+    background-color: #99c2ff;
+  }
+}
